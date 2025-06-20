@@ -6,11 +6,11 @@ const menuItems = [
 	},
 	{
 		title: 'Магазины',
-		url: '../pages/shops.html',
+		url: 'pages/shops.html',
 	},
 	{
 		title: 'О ТРЦ',
-		url: '../pages/about.html',
+		url: 'pages/about.html',
 	},
 ]
 
