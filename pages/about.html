@@ -29,12 +29,12 @@
 			content="Узнайте больше о нашем центре, его истории и преимуществах."
 		/>
 		<meta name="twitter:image" content="og-image.jpg" />
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="../css/main.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
 		/>
-		<link rel="icon" href="E.svg" />
+		<link rel="icon" href="../icons/E.svg" />
 	</head>
 	<body>
 		<!-- Навигация -->
@@ -42,12 +42,14 @@
 			<div class="header__container">
 				<div class="header__left">
 					<a href="index.html" class="header__logo">
-						<img src="logo2.svg" alt="ТРЦ Европейский" />
+						<img src="../icons/logo2.svg" alt="ТРЦ Европейский" />
 					</a>
 				</div>
 				<nav class="header__nav">
 					<ul class="header__nav-list">
-						<li><a href="index.html" class="header__nav-link">Главная</a></li>
+						<li>
+							<a href="../index.html" class="header__nav-link">Главная</a>
+						</li>
 						<li>
 							<a href="about.html" class="header__nav-link active">О ТРЦ</a>
 						</li>
@@ -120,7 +122,7 @@
 			<section class="about-hero animate-on-scroll">
 				<div class="about-hero__video-bg">
 					<video autoplay muted loop playsinline>
-						<source src="video/Европейский ТРЦ.mp4" type="video/mp4" />
+						<source src="../video/Европейский ТРЦ.mp4" type="video/mp4" />
 					</video>
 				</div>
 				<div class="container">
@@ -314,7 +316,11 @@
 				<div class="footer__grid">
 					<div class="footer__column footer__logo-column">
 						<a href="index.html">
-							<img src="logo2.svg" alt="ТРЦ Европейский" class="footer__logo" />
+							<img
+								src="../icons/logo2.svg"
+								alt="ТРЦ Европейский"
+								class="footer__logo"
+							/>
 						</a>
 					</div>
 					<div class="footer__column">
@@ -395,8 +401,8 @@
 			<i class="fas fa-arrow-up"></i>
 		</button>
 
-		<script src="navigation.js"></script>
-		<script src="main.js"></script>
+		<script src="../js/navigation.js"></script>
+		<script src="../js/main.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
 		<script>
