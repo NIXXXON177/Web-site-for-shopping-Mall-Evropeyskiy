@@ -3755,3 +3755,10 @@ body {
 		min-width: 0;
 	}
 }
+.btn.btn-icon.is-favorite {
+	background: rgba(241, 196, 15, 0.12);
+	border-color: #f1c40f;
+}
+.btn.btn-icon.is-favorite i {
+	color: #f1c40f;
+}

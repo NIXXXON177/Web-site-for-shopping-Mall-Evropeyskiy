@@ -1,5 +1,5 @@
 // Импорты
-import './navigation.js'
+//import './navigation.js'
 
 // Инициализация слайдера
 document.addEventListener('DOMContentLoaded', () => {
@@ -353,4 +353,51 @@ if (document.querySelector('.event-search-input')) {
 		})
 	}
 	searchInput.addEventListener('input', filterEvents)
+}
+
+// --- Избранное магазинов ---
+if (document.querySelector('.shop-card')) {
+	const FAV_KEY = 'favoriteShops'
+	// Получить список избранных из localStorage
+	function getFavorites() {
+		try {
+			return JSON.parse(localStorage.getItem(FAV_KEY)) || []
+		} catch {
+			return []
+		}
+	}
+	function setFavorites(arr) {
+		localStorage.setItem(FAV_KEY, JSON.stringify(arr))
+	}
+	function updateFavUI() {
+		const favs = getFavorites()
+		document.querySelectorAll('.btn.btn-icon[data-fav-id]').forEach(btn => {
+			const id = btn.getAttribute('data-fav-id')
+			if (favs.includes(id)) {
+				btn.classList.add('is-favorite')
+				btn.querySelector('i').classList.remove('far')
+				btn.querySelector('i').classList.add('fas')
+			} else {
+				btn.classList.remove('is-favorite')
+				btn.querySelector('i').classList.remove('fas')
+				btn.querySelector('i').classList.add('far')
+			}
+		})
+	}
+	document.querySelectorAll('.btn.btn-icon[data-fav-id]').forEach(btn => {
+		btn.addEventListener('click', e => {
+			e.preventDefault()
+			const id = btn.getAttribute('data-fav-id')
+			let favs = getFavorites()
+			if (favs.includes(id)) {
+				favs = favs.filter(f => f !== id)
+			} else {
+				favs.push(id)
+			}
+			setFavorites(favs)
+			updateFavUI()
+		})
+	})
+	// При загрузке страницы
+	updateFavUI()
 }
