@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Магазины и рестораны ТРЦ Европейский. 395 магазинов и ресторанов в одном месте. Удобная навигация и поиск."
+		/>
+		<title>Магазины и рестораны - ТРЦ Европейский</title>
+		<link rel="stylesheet" href="main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<link rel="icon" href="E.svg" />
+	</head>
+	<body>
+		<!-- Навигация -->
+		<header class="main-header">
+			<div class="header__container">
+				<div class="header__left">
+					<a href="index.html" class="header__logo">
+						<img src="logo2.svg" alt="ТРЦ Европейский" />
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li><a href="index.html" class="header__nav-link">Главная</a></li>
+						<li><a href="about.html" class="header__nav-link">О ТРЦ</a></li>
+						<li>
+							<a href="shops.html" class="header__nav-link active">Магазины</a>
+						</li>
+						<li>
+							<a href="index.html#floors" class="header__nav-link">Этажи</a>
+						</li>
+						<li>
+							<a href="index.html#contacts" class="header__nav-link"
+								>Контакты</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__right">
+					<button class="header__burger" aria-label="Открыть меню">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a
+						href="mailto:info@europe-tc.ru"
+						class="header__mail"
+						aria-label="Написать нам"
+					>
+						<i class="fas fa-envelope"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- Мобильное меню -->
+		<div class="mobile-menu">
+			<div class="mobile-menu__content">
+				<button class="mobile-menu__close" aria-label="Закрыть меню">
+					<i class="fas fa-times"></i>
+				</button>
+				<nav class="mobile-menu__nav">
+					<ul class="mobile-menu__nav-list">
+						<li>
+							<a href="index.html" class="mobile-menu__nav-link">Главная</a>
+						</li>
+						<li>
+							<a href="about.html" class="mobile-menu__nav-link">О ТРЦ</a>
+						</li>
+						<li>
+							<a href="shops.html" class="mobile-menu__nav-link active"
+								>Магазины</a
+							>
+						</li>
+						<li><a href="#floors" class="mobile-menu__nav-link">Этажи</a></li>
+						<li>
+							<a href="#contacts" class="mobile-menu__nav-link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="mobile-menu__contact">
+					<a href="tel:+74959213444" class="mobile-menu__phone"
+						>+7 (495) 921-34-44</a
+					>
+					<a href="mailto:info@europe-tc.ru" class="mobile-menu__email"
+						>info@europe-tc.ru</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- Оверлей меню -->
+		<div class="main-overlay-menu">
+			<div class="main-overlay-menu__content">
+				<button class="main-overlay-menu__close" aria-label="Закрыть меню">
+					<i class="fas fa-times"></i>
+				</button>
+				<nav class="main-overlay-menu__nav">
+					<!-- Ссылки будут добавлены через JavaScript -->
+				</nav>
+			</div>
+		</div>
+
+		<!-- Заголовок страницы с интерактивной картой -->
+		<section class="page-header">
+			<div class="page-header__map">
+				<div id="map" class="page-header__map-container"></div>
+			</div>
+			<div class="container">
+				<h1>Магазины</h1>
+				<p>395 магазинов и ресторанов в одном месте</p>
+				<!-- Поиск магазинов -->
+				<div class="shop-search-bar">
+					<form class="shop-search-form" onsubmit="return false;">
+						<div class="shop-search-input-wrapper">
+							<i class="fas fa-search"></i>
+							<input
+								type="text"
+								class="shop-search-input"
+								placeholder="Поиск магазинов, ресторанов..."
+							/>
+						</div>
+						<button type="submit" class="shop-search-btn" aria-label="Поиск">
+							<i class="fas fa-search"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Улучшенные фильтры -->
+		<section class="shops">
+			<div class="container">
+				<div class="shops__filters">
+					<div class="shops__filter-group">
+						<div class="shops__filter">
+							<select class="filter-select">
+								<option value="">Все категории</option>
+								<option value="clothing">Одежда</option>
+								<option value="shoes">Обувь</option>
+								<option value="accessories">Аксессуары</option>
+								<option value="beauty">Красота</option>
+								<option value="electronics">Электроника</option>
+								<option value="home">Дом</option>
+								<option value="food">Еда</option>
+							</select>
+						</div>
+						<div class="shops__filter">
+							<select class="filter-select">
+								<option value="">Все этажи</option>
+								<option value="1">1 этаж</option>
+								<option value="2">2 этаж</option>
+								<option value="3">3 этаж</option>
+								<option value="4">4 этаж</option>
+							</select>
+						</div>
+						<div class="shops__filter">
+							<select class="filter-select">
+								<option value="">Все бренды</option>
+								<option value="premium">Премиум</option>
+								<option value="mass-market">Масс-маркет</option>
+								<option value="sports">Спортивные</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Сетка магазинов с улучшенным дизайном -->
+				<div class="shops__grid">
+					<!-- Магазин 1 -->
+					<div class="shop-card" data-aos="fade-up" data-page="1">
+						<div class="shop-card__image-wrapper">
+							<img src="img/Zara.jpg" alt="ZARA" class="shop-card__image" />
+							<div class="shop-card__badge">Новинка</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">ZARA</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>2 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Одежда, обувь и аксессуары для всей семьи
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 2.1</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 2 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="100"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img src="img/H&M.webp" alt="H&M" class="shop-card__image" />
+							<div class="shop-card__badge sale">Скидки</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">H&M</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>1 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Модная одежда для женщин, мужчин и детей
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 1.3</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 3 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img src="img/Furla.webp" alt="Furla" class="shop-card__image" />
+							<div class="shop-card__badge">Аксессуары</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Furla</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>1 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">Сумки, аксессуары, обувь</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 1.5</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 4 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="300"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img src="img/Lego.webp" alt="Lego" class="shop-card__image" />
+							<div class="shop-card__badge">Игрушки</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Lego</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>3 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Конструкторы и игрушки для детей
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 3.2</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 5 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="400"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img
+								src="img/Natura.webp"
+								alt="Natura Siberica"
+								class="shop-card__image"
+							/>
+							<div class="shop-card__badge">Красота</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Natura Siberica</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>2 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Косметика, уход за кожей и волосами
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 2.7</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 6 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="500"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img
+								src="img/Red_cube.avif"
+								alt="Красный Куб"
+								class="shop-card__image"
+							/>
+							<div class="shop-card__badge">Подарки</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Красный Куб</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>2 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">Сувениры, подарки, сладости</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 2.9</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 7 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="600"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img src="img/Nike.webp" alt="Nike" class="shop-card__image" />
+							<div class="shop-card__badge">Спорт</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Nike</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>3 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Одежда и обувь для спорта и отдыха
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 3.5</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 8 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="700"
+						data-page="1"
+					>
+						<div class="shop-card__image-wrapper">
+							<img
+								src="img/perekrestok.avif"
+								alt="Перекрёсток"
+								class="shop-card__image"
+							/>
+							<div class="shop-card__badge">Супермаркет</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Перекрёсток</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>-1 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Крупный супермаркет, продукты и товары для дома
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Круглосуточно</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция -1.1</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 9 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="800"
+						data-page="2"
+						style="display: none"
+					>
+						<div class="shop-card__image-wrapper">
+							<img
+								src="img/samsung.jpg"
+								alt="Samsung"
+								class="shop-card__image"
+							/>
+							<div class="shop-card__badge">Техника</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Samsung</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>2 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Смартфоны, электроника, аксессуары
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 2.12</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 10 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="900"
+						data-page="2"
+						style="display: none"
+					>
+						<div class="shop-card__image-wrapper">
+							<img
+								src="img/sokolov.jpg"
+								alt="Sokolov"
+								class="shop-card__image"
+							/>
+							<div class="shop-card__badge">Украшения</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Sokolov</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>1 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Ювелирные изделия, часы, подарки
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 1.8</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Магазин 11 -->
+					<div
+						class="shop-card"
+						data-aos="fade-up"
+						data-aos-delay="1000"
+						data-page="2"
+						style="display: none"
+					>
+						<div class="shop-card__image-wrapper">
+							<img
+								src="img/Zara-home.webp"
+								alt="Zara Home"
+								class="shop-card__image"
+							/>
+							<div class="shop-card__badge">Дом</div>
+						</div>
+						<div class="shop-card__content">
+							<div class="shop-card__meta">
+								<h3 class="shop-card__title">Zara Home</h3>
+								<div class="shop-card__floor">
+									<i class="fas fa-building"></i>
+									<span>2 этаж</span>
+								</div>
+							</div>
+							<p class="shop-card__description">
+								Товары для дома, декор, текстиль
+							</p>
+							<div class="shop-card__info">
+								<div class="shop-card__schedule">
+									<i class="far fa-clock"></i>
+									<span>Пн-Вс: 10:00 - 22:00</span>
+								</div>
+								<div class="shop-card__location">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Секция 2.15</span>
+								</div>
+							</div>
+							<div class="shop-card__actions">
+								<a href="#" class="btn btn-primary">Подробнее</a>
+								<button class="btn btn-icon" aria-label="Добавить в избранное">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Пагинация с улучшенным дизайном -->
+				<div class="shops__pagination">
+					<button
+						class="pagination__prev"
+						disabled
+						onclick="changeShopPage(-1)"
+					>
+						<i class="fas fa-chevron-left"></i>
+					</button>
+					<div class="pagination__numbers">
+						<a
+							href="#"
+							class="pagination__number active"
+							onclick="showShopPage(1);return false;"
+							>1</a
+						>
+						<a
+							href="#"
+							class="pagination__number"
+							onclick="showShopPage(2);return false;"
+							>2</a
+						>
+					</div>
+					<button class="pagination__next" onclick="changeShopPage(1)">
+						<i class="fas fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Футер -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<div class="footer__column footer__logo-column">
+						<a href="index.html">
+							<img
+								src="icons/logo2.svg"
+								alt="ТРЦ Европейский"
+								class="footer__logo"
+							/>
+						</a>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__column-title">Контакты</h3>
+						<ul class="footer__links">
+							<li class="footer__link">
+								<b>Адрес:</b> Москва, площадь Киевского вокзала, 2, ст. метро
+								«Киевская»
+							</li>
+							<li class="footer__link">
+								<b>Телефон:</b>
+								<a href="tel:+74959213444">+7 (495) 921-34-44</a>
+							</li>
+							<li class="footer__link">
+								<b>Офис:</b> <a href="tel:+74959214444">+7 (495) 921-44-44</a>
+							</li>
+							<li class="footer__link">
+								<b>Email:</b>
+								<a href="mailto:info@europe-tc.ru">info@europe-tc.ru</a>
+							</li>
+							<li class="footer__link">
+								<b>Пресс-служба:</b>
+								<a href="mailto:press@europe-trade.ru">press@europe-trade.ru</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__column-title">Социальные сети</h3>
+						<div class="footer__social">
+							<a
+								href="https://t.me/evropeiskiy_trc"
+								class="footer__social-link"
+								target="_blank"
+								rel="noopener"
+								aria-label="Telegram"
+								><i class="fab fa-telegram"></i
+							></a>
+							<a
+								href="https://vk.com/evropeiskiy_official"
+								class="footer__social-link"
+								target="_blank"
+								rel="noopener"
+								aria-label="VK"
+								><i class="fab fa-vk"></i
+							></a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__column-title">Информация</h3>
+						<ul class="footer__links">
+							<li class="footer__link"><a href="#">Режим работы</a></li>
+							<li class="footer__link"><a href="#">Как добраться</a></li>
+							<li class="footer__link"><a href="#">Правила</a></li>
+							<li class="footer__link"><a href="#">Арендаторам</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copyright">
+						© 2025 ТРЦ Европейский. Все права защищены.
+					</div>
+					<div class="footer__legal">
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Условия использования</a>
+						<a href="#">Карта сайта</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Добавляем скрипты -->
+		<script src="js/navigation.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
+		<script>
+			AOS.init({
+				duration: 800,
+				once: true,
+			})
+
+			// Инициализация карты
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+					center: [55.751999, 37.617734],
+					zoom: 15,
+				})
+
+				var myPlacemark = new ymaps.Placemark([55.751999, 37.617734], {
+					hintContent: 'ТРЦ Европейский',
+					balloonContent: 'ТРЦ Европейский',
+				})
+
+				myMap.geoObjects.add(myPlacemark)
+			})
+
+			let currentShopPage = 1
+			function showShopPage(page) {
+				currentShopPage = page
+				document.querySelectorAll('.shops__grid .shop-card').forEach(card => {
+					if (card.getAttribute('data-page') == page) {
+						card.style.display = ''
+					} else {
+						card.style.display = 'none'
+					}
+				})
+				document.querySelectorAll('.pagination__number').forEach((el, idx) => {
+					if (parseInt(el.textContent) === page) {
+						el.classList.add('active')
+					} else {
+						el.classList.remove('active')
+					}
+				})
+				document.querySelector('.pagination__prev').disabled = page === 1
+				document.querySelector('.pagination__next').disabled = page === 2
+			}
+			function changeShopPage(delta) {
+				let newPage = currentShopPage + delta
+				if (newPage < 1 || newPage > 2) return
+				showShopPage(newPage)
+			}
+			showShopPage(1)
+		</script>
+	</body>
+</html>

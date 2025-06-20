@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="ТРЦ Европейский - современный торгово-развлекательный центр в центре Москвы. Узнайте больше о нашем центре, его истории и преимуществах."
+		/>
+		<title>О ТРЦ Европейский - История, преимущества и информация</title>
+		<meta
+			property="og:title"
+			content="ТРЦ Европейский - современный торгово-развлекательный центр в центре Москвы"
+		/>
+		<meta
+			property="og:description"
+			content="Узнайте больше о нашем центре, его истории и преимуществах."
+		/>
+		<meta property="og:image" content="og-image.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://europe-tc.ru/about.html" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="ТРЦ Европейский - современный торгово-развлекательный центр в центре Москвы"
+		/>
+		<meta
+			name="twitter:description"
+			content="Узнайте больше о нашем центре, его истории и преимуществах."
+		/>
+		<meta name="twitter:image" content="og-image.jpg" />
+		<link rel="stylesheet" href="main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<link rel="icon" href="E.svg" />
+	</head>
+	<body>
+		<!-- Навигация -->
+		<header class="main-header">
+			<div class="header__container">
+				<div class="header__left">
+					<a href="index.html" class="header__logo">
+						<img src="logo2.svg" alt="ТРЦ Европейский" />
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li><a href="index.html" class="header__nav-link">Главная</a></li>
+						<li>
+							<a href="about.html" class="header__nav-link active">О ТРЦ</a>
+						</li>
+						<li><a href="shops.html" class="header__nav-link">Магазины</a></li>
+						<li>
+							<a href="index.html#floors" class="header__nav-link">Этажи</a>
+						</li>
+						<li>
+							<a href="index.html#contacts" class="header__nav-link"
+								>Контакты</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__right">
+					<button class="header__burger" aria-label="Открыть меню">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a
+						href="mailto:info@europe-tc.ru"
+						class="header__mail"
+						aria-label="Написать нам"
+					>
+						<i class="fas fa-envelope"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- Мобильное меню -->
+		<div class="mobile-menu">
+			<div class="mobile-menu__content">
+				<button class="mobile-menu__close" aria-label="Закрыть меню">
+					<i class="fas fa-times"></i>
+				</button>
+				<nav class="mobile-menu__nav">
+					<ul class="mobile-menu__nav-list">
+						<li>
+							<a href="index.html" class="mobile-menu__nav-link">Главная</a>
+						</li>
+						<li>
+							<a href="about.html" class="mobile-menu__nav-link active"
+								>О ТРЦ</a
+							>
+						</li>
+						<li>
+							<a href="shops.html" class="mobile-menu__nav-link">Магазины</a>
+						</li>
+						<li><a href="#floors" class="mobile-menu__nav-link">Этажи</a></li>
+						<li>
+							<a href="#contacts" class="mobile-menu__nav-link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="mobile-menu__contact">
+					<a href="tel:+74959213444" class="mobile-menu__phone"
+						>+7 (495) 921-34-44</a
+					>
+					<a href="mailto:info@europe-tc.ru" class="mobile-menu__email"
+						>info@europe-tc.ru</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<!-- Hero-блок с видео-фоном -->
+			<section class="about-hero animate-on-scroll">
+				<div class="about-hero__video-bg">
+					<video autoplay muted loop playsinline>
+						<source src="video/Европейский ТРЦ.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="container">
+					<div class="about-hero__content">
+						<div>
+							<h1>ТРЦ «Европейский»</h1>
+							<p class="about-hero__lead">
+								Современный центр для всей семьи в самом сердце Москвы
+							</p>
+							<div class="about-hero__stats">
+								<div class="stat">
+									<span class="stat__number">395</span>
+									<span class="stat__label">магазинов</span>
+								</div>
+								<div class="stat">
+									<span class="stat__number">20млн+</span>
+									<span class="stat__label">посетителей в год</span>
+								</div>
+								<div class="stat">
+									<span class="stat__number">180к</span>
+									<span class="stat__label">м² площадь</span>
+								</div>
+								<div class="stat">
+									<span class="stat__number">3</span>
+									<span class="stat__label">станции метро рядом</span>
+								</div>
+							</div>
+							<a href="#facts" class="btn btn-primary">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Инфографика с анимацией -->
+			<section class="about-infographics animate-on-scroll" id="facts">
+				<div class="container">
+					<div class="about-infographics__grid">
+						<div class="about-infographics__item" data-aos="fade-up">
+							<i class="fas fa-store"></i>
+							<span>395 магазинов</span>
+							<p>Ведущие мировые бренды</p>
+						</div>
+						<div
+							class="about-infographics__item"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<i class="fas fa-utensils"></i>
+							<span>30+ ресторанов</span>
+							<p>Кухни со всего мира</p>
+						</div>
+						<div
+							class="about-infographics__item"
+							data-aos="fade-up"
+							data-aos-delay="200"
+						>
+							<i class="fas fa-film"></i>
+							<span>Кинотеатр IMAX</span>
+							<p>Новейшие технологии</p>
+						</div>
+						<div
+							class="about-infographics__item"
+							data-aos="fade-up"
+							data-aos-delay="300"
+						>
+							<i class="fas fa-subway"></i>
+							<span>м. Киевская</span>
+							<p>
+								3 станции метро в шаговой доступности, >25 маршрутов наземного
+								транспорта
+							</p>
+						</div>
+						<div
+							class="about-infographics__item"
+							data-aos="fade-up"
+							data-aos-delay="400"
+						>
+							<i class="fas fa-car"></i>
+							<span>1200 мест на парковке</span>
+							<p>Комфортная парковка</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- История строительства -->
+			<section class="about-history animate-on-scroll">
+				<div class="container">
+					<h2>История строительства</h2>
+					<ul class="about-history__list">
+						<li>
+							С 1970-х годов на месте ТРЦ располагался сквер, который в 1990-х
+							годах занял оптовый рынок «Китеж».
+						</li>
+						<li>
+							В 1995 году мэрия Москвы запланировала реконструкцию территории
+							между Киевским вокзалом и Бережковской набережной, в ходе которой
+							рынок должен был быть ликвидирован.
+						</li>
+						<li>
+							Проектом заинтересовались основатели «Электронной ярмарки на
+							Рижской» и совладельцы Черкизовского рынка Год Нисанов и Зарах
+							Илиев.
+						</li>
+						<li>
+							Строительство началось в 2002 году и закончилось в 2006 году.
+						</li>
+						<li>
+							Проект разработал архитектор Юрий Платонов, а дизайн-проект здания
+							подготовил Церетели.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Достижения с интерактивными элементами -->
+			<section class="about-achievements animate-on-scroll">
+				<div class="container">
+					<h2>Наши достижения</h2>
+					<div class="about-achievements__grid">
+						<div class="about-achievement" data-aos="zoom-in">
+							<i class="fas fa-award"></i>
+							<p>Лучший ТРЦ Москвы 2023</p>
+							<div class="achievement-details">
+								<p>По версии премии "Рекорды Рынка Недвижимости"</p>
+							</div>
+						</div>
+						<div
+							class="about-achievement"
+							data-aos="zoom-in"
+							data-aos-delay="100"
+						>
+							<i class="fas fa-robot"></i>
+							<p>Внедрение роботов-доставщиков</p>
+							<div class="achievement-details">
+								<p>Первый ТРЦ с автоматизированной доставкой</p>
+							</div>
+						</div>
+						<div
+							class="about-achievement"
+							data-aos="zoom-in"
+							data-aos-delay="200"
+						>
+							<i class="fas fa-mobile-alt"></i>
+							<p>Интерактивная карта и мобильное приложение</p>
+							<div class="achievement-details">
+								<p>Удобная навигация по центру</p>
+							</div>
+						</div>
+						<div
+							class="about-achievement"
+							data-aos="zoom-in"
+							data-aos-delay="300"
+						>
+							<i class="fas fa-map-marker-alt"></i>
+							<p>Удобное расположение</p>
+							<div class="achievement-details">
+								<p>20 минут до Кремля, 30 минут до аэропорта</p>
+							</div>
+						</div>
+						<div
+							class="about-achievement"
+							data-aos="zoom-in"
+							data-aos-delay="300"
+						>
+							<i class="fas fa-child"></i>
+							<p>Лучшие детские зоны</p>
+							<div class="achievement-details">
+								<p>Безопасность и комфорт для детей</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Карта -->
+			<section class="about-map animate-on-scroll" id="location">
+				<div class="container">
+					<h2>Мы на карте</h2>
+					<div
+						class="about-map__frame"
+						style="width: 100%; height: 320px"
+					></div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Футер -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<div class="footer__column footer__logo-column">
+						<a href="index.html">
+							<img src="logo2.svg" alt="ТРЦ Европейский" class="footer__logo" />
+						</a>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__column-title">Контакты</h3>
+						<ul class="footer__links">
+							<li class="footer__link">
+								<b>Адрес:</b> Москва, площадь Киевского вокзала, 2, ст. метро
+								«Киевская»
+							</li>
+							<li class="footer__link">
+								<b>Телефон:</b>
+								<a href="tel:+74959213444">+7 (495) 921-34-44</a>
+							</li>
+							<li class="footer__link">
+								<b>Офис:</b> <a href="tel:+74959214444">+7 (495) 921-44-44</a>
+							</li>
+							<li class="footer__link">
+								<b>Email:</b>
+								<a href="mailto:info@europe-tc.ru">info@europe-tc.ru</a>
+							</li>
+							<li class="footer__link">
+								<b>Пресс-служба:</b>
+								<a href="mailto:press@europe-trade.ru">press@europe-trade.ru</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__column-title">Социальные сети</h3>
+						<div class="footer__social">
+							<a
+								href="https://t.me/evropeiskiy_trc"
+								class="footer__social-link"
+								target="_blank"
+								rel="noopener"
+								aria-label="Telegram"
+								><i class="fab fa-telegram"></i
+							></a>
+							<a
+								href="https://vk.com/evropeiskiy_official"
+								class="footer__social-link"
+								target="_blank"
+								rel="noopener"
+								aria-label="VK"
+								><i class="fab fa-vk"></i
+							></a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__column-title">Информация</h3>
+						<ul class="footer__links">
+							<li class="footer__link"><a href="#">Режим работы</a></li>
+							<li class="footer__link"><a href="#">Как добраться</a></li>
+							<li class="footer__link"><a href="#">Правила</a></li>
+							<li class="footer__link"><a href="#">Арендаторам</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copyright">
+						© 2025 ТРЦ Европейский. Все права защищены.
+					</div>
+					<div class="footer__legal">
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Условия использования</a>
+						<a href="#">Карта сайта</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Кнопка "Наверх" -->
+		<button
+			id="toTop"
+			class="to-top"
+			aria-label="Наверх"
+			onclick="window.scrollTo({top:0,behavior:'smooth'})"
+		>
+			<i class="fas fa-arrow-up"></i>
+		</button>
+
+		<script src="navigation.js"></script>
+		<script src="main.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
+		<script>
+			AOS.init({
+				duration: 800,
+				once: true,
+			})
+
+			// Яндекс.Карта для блока "Мы на карте"
+			if (document.querySelector('.about-map__frame')) {
+				ymaps.ready(function () {
+					var map = new ymaps.Map(document.querySelector('.about-map__frame'), {
+						center: [55.744263, 37.565527],
+						zoom: 17,
+						controls: ['zoomControl'],
+					})
+					var placemark = new ymaps.Placemark(
+						[55.744263, 37.565527],
+						{
+							hintContent: 'ТРЦ Европейский',
+							balloonContent: 'Москва, пл. Киевского вокзала, 2',
+						},
+						{
+							preset: 'islands#redShoppingIcon',
+						}
+					)
+					map.geoObjects.add(placemark)
+				})
+			}
+		</script>
+	</body>
+</html>
